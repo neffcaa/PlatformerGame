@@ -90,5 +90,6 @@ namespace PTFGame
             if (e.KeyCode == Keys.Left) { left = false; }           
 
         }
+
     }
 }
