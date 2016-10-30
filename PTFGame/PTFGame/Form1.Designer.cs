@@ -33,12 +33,15 @@
             this.Screen = new System.Windows.Forms.Panel();
             this.Player = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.badDude = new PTFGame.Enemy();
             this.Screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.badDude)).BeginInit();
             this.SuspendLayout();
             // 
             // Screen
             // 
+            this.Screen.Controls.Add(this.badDude);
             this.Screen.Controls.Add(this.Player);
             this.Screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Screen.Location = new System.Drawing.Point(0, 0);
@@ -62,6 +65,15 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // badDude
+            // 
+            this.badDude.BackColor = System.Drawing.Color.Red;
+            this.badDude.Location = new System.Drawing.Point(450, 104);
+            this.badDude.Name = "badDude";
+            this.badDude.Size = new System.Drawing.Size(25, 25);
+            this.badDude.TabIndex = 1;
+            this.badDude.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -74,6 +86,7 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.Screen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.badDude)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,6 +96,7 @@
         private System.Windows.Forms.Panel Screen;
         private System.Windows.Forms.PictureBox Player;
         private System.Windows.Forms.Timer timer1;
+        private Enemy badDude;
     }
 }
 

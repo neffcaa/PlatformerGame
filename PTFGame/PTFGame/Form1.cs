@@ -34,18 +34,29 @@ namespace PTFGame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (right == true) { Player.Left += 5; }
-            if (left == true) { Player.Left -= 5; }
+            badDude.fall(Screen.Height);
+            
+            if (right == true)
+            {
+                Player.Left += 5;
+                badDude.moveRight();
+            }
+            if (left == true)
+            {
+                Player.Left -= 5;
+                badDude.moveLeft();
+            }
 
             if (jump == true)
             {
+                badDude.jump();
                 Player.Top -= force;
                 force -= 1;
             }
-
+                        
             if (Player.Top + Player.Height >= Screen.Height)
             {
-                Player.Top = Screen.Height - Player.Height;
+                Player.Top = Screen.Height - Player.Height;               
                 jump = false;
             }
             else
@@ -68,6 +79,7 @@ namespace PTFGame
                 {
                     jump = true;
                     force = G;
+                    badDude.setJump(G);                    
                 }
             }
         }
@@ -75,8 +87,7 @@ namespace PTFGame
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Right) { right = false; }
-            if (e.KeyCode == Keys.Left) { left = false; }
-           
+            if (e.KeyCode == Keys.Left) { left = false; }           
 
         }
     }
