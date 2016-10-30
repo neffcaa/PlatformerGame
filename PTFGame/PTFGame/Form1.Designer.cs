@@ -1,6 +1,6 @@
 ﻿namespace PTFGame
-{
-    // Test comment for Zach's first commit to branch zach 
+{    
+    // Test Comment for Charlie's first commit to branch
     partial class Form1
     {
         /// <summary>

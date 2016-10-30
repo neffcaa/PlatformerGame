@@ -60,7 +60,7 @@ namespace PTFGame
         {
             if (e.KeyCode == Keys.Right) { right = true; }
             if (e.KeyCode == Keys.Left) { left = true; }
-            if (e.KeyCode == Keys.Escape) { this.Close(); }
+            if (e.KeyCode == Keys.Escape) { this.Close(); } 
 
             if (jump != true)
             {
@@ -76,7 +76,6 @@ namespace PTFGame
         {
             if (e.KeyCode == Keys.Right) { right = false; }
             if (e.KeyCode == Keys.Left) { left = false; }
-           
 
         }
     }
