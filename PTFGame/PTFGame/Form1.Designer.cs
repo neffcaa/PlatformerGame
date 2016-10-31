@@ -31,18 +31,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Screen = new System.Windows.Forms.Panel();
-            this.Player = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.movementTimer = new System.Windows.Forms.Timer(this.components);
             this.badDude = new PTFGame.Enemy();
+            this.player = new PTFGame.Player();
+            this.gravity = new System.Windows.Forms.Timer(this.components);
             this.Screen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.badDude)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.SuspendLayout();
             // 
             // Screen
             // 
+            this.Screen.Controls.Add(this.player);
             this.Screen.Controls.Add(this.badDude);
-            this.Screen.Controls.Add(this.Player);
             this.Screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Screen.Location = new System.Drawing.Point(0, 0);
             this.Screen.Name = "Screen";
@@ -50,20 +51,11 @@
             this.Screen.TabIndex = 0;
             this.Screen.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // Player
+            // movementTimer
             // 
-            this.Player.BackColor = System.Drawing.Color.Black;
-            this.Player.Location = new System.Drawing.Point(310, 196);
-            this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(25, 25);
-            this.Player.TabIndex = 0;
-            this.Player.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.movementTimer.Enabled = true;
+            this.movementTimer.Interval = 1;
+            this.movementTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // badDude
             // 
@@ -73,6 +65,21 @@
             this.badDude.Size = new System.Drawing.Size(25, 25);
             this.badDude.TabIndex = 1;
             this.badDude.TabStop = false;
+            // 
+            // player
+            // 
+            this.player.BackColor = System.Drawing.Color.Blue;
+            this.player.Location = new System.Drawing.Point(325, 199);
+            this.player.Name = "player";
+            this.player.Size = new System.Drawing.Size(25, 25);
+            this.player.TabIndex = 2;
+            this.player.TabStop = false;
+            // 
+            // gravity
+            // 
+            this.gravity.Enabled = true;
+            this.gravity.Interval = 1;
+            this.gravity.Tick += new System.EventHandler(this.gravity_Tick);
             // 
             // Form1
             // 
@@ -85,8 +92,8 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.Screen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.badDude)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,9 +101,10 @@
         #endregion
 
         private System.Windows.Forms.Panel Screen;
-        private System.Windows.Forms.PictureBox Player;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer movementTimer;
         private Enemy badDude;
+        private Player player;
+        private System.Windows.Forms.Timer gravity;
     }
 }
 
