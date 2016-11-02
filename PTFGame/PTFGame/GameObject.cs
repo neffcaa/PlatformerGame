@@ -10,5 +10,10 @@ namespace PTFGame
     public abstract class GameObject : PictureBox 
     {
 
+
+        public void collide(GameObject otherObject)
+        {
+
+        }
     }
 }
