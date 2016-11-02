@@ -62,6 +62,9 @@
     <Compile Include="GameObject.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Platform.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Player.cs">
       <SubType>Component</SubType>
     </Compile>
