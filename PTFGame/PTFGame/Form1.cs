@@ -14,9 +14,7 @@ namespace PTFGame
     {
 
         bool right;
-        bool left;
-
-        bool jump;
+        bool left;        
 
         int G = 30;
         int force;
@@ -25,18 +23,10 @@ namespace PTFGame
         {
 
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        }        
 
         private void timer1_Tick(object sender, EventArgs e)
-        {
-            
-            
-            
+        {    
             if (right == true)
             {
                 player.moveRight();
@@ -44,8 +34,7 @@ namespace PTFGame
             if (left == true)
             {
                 player.moveLeft();
-            }           
-            
+            }
         }
 
         private void gravity_Tick(object sender, EventArgs e)
