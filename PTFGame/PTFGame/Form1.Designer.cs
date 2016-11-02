@@ -49,6 +49,7 @@
             this.Screen.Name = "Screen";
             this.Screen.Size = new System.Drawing.Size(671, 544);
             this.Screen.TabIndex = 0;
+            
             // 
             // movementTimer
             // 

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +9,11 @@ namespace PTFGame
 {
     public abstract class GameObject : PictureBox 
     {
-        public abstract void collide(GameObject otherObject);            
+
+
+        public void collide(GameObject otherObject)
+        {
+
+        }
     }
 }
