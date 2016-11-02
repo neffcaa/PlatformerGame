@@ -27,15 +27,7 @@ namespace PTFGame
                         thingI.collide(thingX);
                         thingX.collide(thingI);
                     }
-
-                   
-                    {
-                        // Objects have collided from left or right
-                    }
-                    
-                
-
-                    
+                         
                 }
                
             }
