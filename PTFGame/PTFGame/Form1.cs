@@ -26,6 +26,7 @@ namespace PTFGame
             InitializeComponent();
             handler.thingsOnMap.Add(player);
             handler.thingsOnMap.Add(badDude);
+            handler.thingsOnMap.Add(platform1);
         }    
         
         public void addToHandler()
