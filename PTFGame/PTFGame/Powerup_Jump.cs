@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace PTFGame
 {
-    class Player : MovingObject
+    class Powerup_Jump : GameObject
     {
-               
+        public override void collide(GameObject otherObject)
+        {
+            
+        }
     }
 }
-
-

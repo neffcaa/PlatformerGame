@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coin.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CollisionHandler.cs" />
     <Compile Include="Enemy.cs">
       <SubType>Component</SubType>
@@ -63,6 +66,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Player.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Powerup_Jump.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />

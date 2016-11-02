@@ -21,7 +21,7 @@ namespace PTFGame
 
         public Form1()
         {
-
+            
             InitializeComponent();
         }        
 

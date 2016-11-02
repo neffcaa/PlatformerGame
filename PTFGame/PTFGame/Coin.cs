@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace PTFGame
 {
-    class Player : MovingObject
+    class Coin : GameObject
     {
-               
+
     }
 }
-
-
