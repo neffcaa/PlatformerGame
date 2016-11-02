@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace PTFGame
 {
-    class Enemy : MovingObject
+    class Enemy : GameObject
     {
-       
-       
+        public override void collide(GameObject otherObject)
+        {
+          
+        }
     }
 }
