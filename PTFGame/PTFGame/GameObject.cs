@@ -11,9 +11,7 @@ namespace PTFGame
     {
 
 
-        public void collide(GameObject otherObject)
-        {
-
-        }
+        public abstract void collide(GameObject otherObject);
+       
     }
 }

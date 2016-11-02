@@ -12,6 +12,8 @@ namespace PTFGame
 {
     public partial class Form1 : Form
     {
+        CollisionHandler handler = new CollisionHandler();
+        List<GameObject> list = new List<GameObject>();
 
         bool right;
         bool left;        
@@ -20,10 +22,16 @@ namespace PTFGame
         int force;
 
         public Form1()
+        {            
+            InitializeComponent();
+            handler.thingsOnMap.Add(player);
+            handler.thingsOnMap.Add(badDude);
+        }    
+        
+        public void addToHandler()
         {
             
-            InitializeComponent();
-        }        
+        }    
 
         private void timer1_Tick(object sender, EventArgs e)
         {    
@@ -35,13 +43,14 @@ namespace PTFGame
             {
                 player.moveLeft();
             }
+            handler.checkCollisions();
         }
 
         private void gravity_Tick(object sender, EventArgs e)
         {
             badDude.fall(Screen.Height);
             player.fall(Screen.Height);
-
+            
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -65,9 +74,10 @@ namespace PTFGame
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Right) { right = false; }
-            if (e.KeyCode == Keys.Left) { left = false; }           
-
+            if (e.KeyCode == Keys.Left) { left = false; }        
         }
+
+
 
       
     }

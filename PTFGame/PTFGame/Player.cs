@@ -8,7 +8,11 @@ namespace PTFGame
 {
     class Player : MovingObject
     {
-               
+        public override void collide(GameObject otherObject)
+        {
+            this.BackColor = System.Drawing.Color.Red;
+        }
+
     }
 }
 

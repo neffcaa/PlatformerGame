@@ -8,6 +8,9 @@ namespace PTFGame
 {
     class Coin : GameObject
     {
-
+        public override void collide(GameObject otherObject)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

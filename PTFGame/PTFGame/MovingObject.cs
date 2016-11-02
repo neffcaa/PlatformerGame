@@ -47,5 +47,9 @@ namespace PTFGame
 
         }
 
+        public override void collide(GameObject otherObject)
+        {
+            
+        }
     }
 }
